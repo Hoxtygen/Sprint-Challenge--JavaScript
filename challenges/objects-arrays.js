@@ -133,9 +133,7 @@ The zoos need a list of all their animal's names (names only, not scientific) co
 */
 
 const lowerCase = [];
-zooAnimals.map(animal => {
-  lowerCase.push("Name:" + " " + animal.animal_name.toLowerCase());
-});
+zooAnimals.map(animal => lowerCase.push(animal.animal_name.toLowerCase()));
 console.log(lowerCase); 
 
 /* Request 3: .filter() 
@@ -144,9 +142,8 @@ The zoos are concenred about animals with a lower population count. Find out whi
 
 */
 const largerPopulation = [];
-zooAnimals.filter(lesser => {
-  lesser.population < 5 ? largerPopulation.push(lesser): []
-})
+zooAnimals.filter(lesser => lesser.population < 5 ? largerPopulation.push(lesser): []
+)
 console.log(largerPopulation);
 
 /* Request 4: .reduce() 
