@@ -30,13 +30,36 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Describe the biggest difference between `.forEach` & `.map`.
 
+    The `forEach()` method doesn’t actually return anything (undefined). It simply calls a provided function on each element in your array. This callback is allowed to mutate the calling array.
+    Meanwhile, the `map()` method will also call a provided function on every element in the array. The difference is that map() utilizes return values and actually returns a new Array of the same size.
+
 2. What is the difference between a function and a method?
+
+    A function is a piece of code that is called by name. It can be passed data to operate on (i.e. the parameters) and can optionally return data (the return value). All data that is passed to a function is explicitly passed.
+
+    A method is a piece of code that is called by a name that is associated with an object. In most respects it is identical to a function except for two key differences:
+
+    A method is implicitly passed the object on which it was called.
+    A method is able to operate on data that is contained within the class (remembering that an object is an instance of a class - the class is the definition, the object is an instance of that data).
 
 3. What is closure?
 
+ A closure is a feature in JavaScript where an inner function has access to the enclosing function’s variables — a scope chain.
+The closure has three scope chains:
+1. it has access to its own scope — variables defined between its curly brackets
+2. it has access to the outer function’s variables
+3. it has access to the global variables
+
 4. Describe the four rules of the 'this' keyword.
 
+    1.  Is the function called by new?
+    2.  Is the function called by call(), apply(), or bind()?
+    3.  Is the function called as a method, ie: obj.func()?
+    4.  Is the function called in the global scope? If strict mode is enabled, return undefined. Otherwise, return the global object, ie: window.
+
 5. Why do we need super() in an extended class?
+
+The super keyword is used to access and call functions on the class parent. When used in a constructor, the super keyword appears alone and must be used before the `this` keyword is used.
 
 ## Project Set up
 
@@ -66,19 +89,19 @@ Your finished project must include all of the following requirements:
 
 ## Task 1: Objects and Arrays
 Test your knowledge of objects and arrays. 
-* [ ] Use the [objects-arrays.js](challenges/objects-arrays.js) link to get started.  Read the instructions carefully!
+* [x] Use the [objects-arrays.js](challenges/objects-arrays.js) link to get started.  Read the instructions carefully!
 
 ## Task 2: Functions
 This challenge takes a look at callbacks and closures as well as scope. 
-* [ ] Use the [functions.js](challenges/functions.js) link to get started. Read the instructions carefully!
+* [x] Use the [functions.js](challenges/functions.js) link to get started. Read the instructions carefully!
 
 ## Task 3: Prototypes
 Create constructors, bind methods, and create cuboids in this prototypes challenge.
-* [ ] Use the [prototypes.js](challenges/prototypes.js) link to get started. Read the instructions carefully!
+* [x] Use the [prototypes.js](challenges/prototypes.js) link to get started. Read the instructions carefully!
 
 ## Task 4: Classes
 Once you have completed the prototypes challenge, it's time to convert all your hard work into classes.
-* [ ] Use the [classes.js](challenges/classes.js) link to get started. Read the instructions carefully!
+* [x] Use the [classes.js](challenges/classes.js) link to get started. Read the instructions carefully!
 
 In your solutions, it is essential that you follow best practices and produce clean and professional results. Schedule time to review, refine, and assess your work and perform basic professional polishing including spell-checking and grammar-checking on your work. It is better to submit a challenge that meets MVP than one that attempts too much and does not.
 
